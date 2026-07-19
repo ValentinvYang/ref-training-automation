@@ -180,7 +180,7 @@ while True:
                         "answers": final_answers
                     }
                     collection.insert_one(doc)
-                    print("✅ Question saved (correctly answered).")
+                    print("Question saved (correctly answered).")
                 else:
                     print("Already in database, not saving.")
 
@@ -196,9 +196,9 @@ while True:
         )        
         driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", yes_button)
         yes_button.click()
-        print("🔁 New session started.")
+        print("New session started.")
     except Exception as e:
-        print(f"❌ Could not find or click 'Ja' button: {e}")
+        print(f"Could not find or click 'Ja' button: {e}")
         break
 
 print("Finished or exited")
